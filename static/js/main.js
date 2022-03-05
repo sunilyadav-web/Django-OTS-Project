@@ -21,7 +21,6 @@ function checkUser(username) {
     var l = username.length;
     if (l >= 4) {
         war.innerHTML = "";
-        console.log(l);
         req.open(
             "GET",
             "http://localhost:8000/check-name?username=" + username,
@@ -33,8 +32,10 @@ function checkUser(username) {
         error.classList.remove("alert-danger");
         error.innerHTML = "";
         war.innerHTML = "";
+        btn.disabled = true;
     }
     if (l <= 3) {
+        btn.disabled = true;
         war.innerHTML = "*Minimum length 4 characters";
     }
 }
