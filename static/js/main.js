@@ -23,7 +23,7 @@ function checkUser(username) {
         war.innerHTML = "";
         req.open(
             "GET",
-            "http://localhost:8000/check-name?username=" + username,
+            "/check-name?username=" + username,
             true
         );
         req.send();
