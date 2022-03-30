@@ -167,7 +167,7 @@ def saveQuestion(request):
     
 def editQuestion(request):
     try:
-     request.session['role']=='ADMIN'
+     request.session['role']=='ADMIN' 
     except KeyError:
      return HttpResponseRedirect('/login')
     q=request.GET['qun']
