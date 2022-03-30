@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Question(models.Model):
-    quno=models.IntegerField(primary_key=True,auto_created=True)
+    quno=models.IntegerField(primary_key=True, auto_created=True)
     que=models.CharField(max_length=400)
     optiona=models.CharField(max_length=100)
     optionb=models.CharField(max_length=100)

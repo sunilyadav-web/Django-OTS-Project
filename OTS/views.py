@@ -154,7 +154,9 @@ def userResults(request):
     return res
 
 def saveQuestion(request):
+    n=Question.objects.all()
     question=Question()
+    question.quno=n.quno+1
     question.que=request.POST['question']
     question.optiona=request.POST['optiona']
     question.optionb=request.POST['optionb']
